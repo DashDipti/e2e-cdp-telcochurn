@@ -10,8 +10,8 @@ image:images/cdf/HOL.PNG[]  +
 
 == Introduction
 
-Cloudera Data Platform (CDP) has been built from the ground up to support hybrid, multi-cloud data management in support of a Data Fabric architecture.
-This workshop introduces CDP, with a focus on the data management capabilities that enable the Data Fabric and Data Lakehouse. The workshop will include 5 key components which are: Cloudera Data Flow, Cloudera Data Engineering, Cloudera Data Warehouse, Cloudera Machine Learning & Data Visualization. A brief description of the same is provided below in the below overview section.
+*Cloudera Data Platform (CDP)* has been built from the ground up to support hybrid, multi-cloud data management in support of a Data Fabric architecture.
+This workshop introduces CDP, with a focus on the data management capabilities that enable the Data Fabric and Data Lakehouse. The workshop will include 5 key components which are: *Cloudera Data Flow, Cloudera Data Engineering, Cloudera Data Warehouse, Cloudera Machine Learning & Data Visualization*. A brief description of the same is provided below in the below overview section.
 
 == Overview
 
