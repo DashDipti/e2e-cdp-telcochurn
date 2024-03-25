@@ -1,0 +1,24 @@
+1. Give 'parameters.conf' to the users
+2. Run the create table script using Hive only (For all users and for master data)
+3. Change workload users password for all users - Changeme123!
+4. Kafka broker list - Provide to user
+mtn-streams-corebroker1.psemeta.dp5i-5vkq.cloudera.site:9093,mtn-streams-corebroker0.psemeta.dp5i-5vkq.cloudera.site:9093,mtn-streams-corebroker2.psemeta.dp5i-5vkq.cloudera.site:9093
+5. data_lake_name: s3a://psemeta-buk-73b98f8e/
+6. For CDE
+●	Set your environment bucket name (edit line 2) in parameters.conf file.
+●	Upload parameters.conf, CDE-telco_data_enrichment.py and CDE-updateTable.py scripts to a 'Telco_Churn' folder in Resources.
+●	Create Spark jobs for each script (Name as - _CDE-Data-Enrichment,_CDE-Table-Update), without Arguments (do not specify the user id). Set the job name as the same as the python script (it will be easier to identify). 
+	Just Create, not Create and Run.
+7. For Data Viz make sure that the 'New Connection' option is available for users
+
+
+Use the exact following format for dataviz model value retrieval.
+cviz_rest('{"url":"https://modelservice.ml-6e4b5fc6-b95.psemeta.dp5i-5vkq.cloudera.site/model","accessKey":"mrfdj9ry0cidswoez0jyna9vc7lk7aw7","colnames":["monthlycharges","totalcharges","tenure","gender","dependents","onlinesecurity","multiplelines","internetservice","seniorcitizen","techsupport", "contract","streamingmovies","deviceprotection","paymentmethod","streamingtv","phoneservice", "paperlessbilling","partner","onlinebackup"],"response_colname":"result"}')
+cviz_rest('{"url":"https://modelservice.ml-6e4b5fc6-b95.psemeta.dp5i-5vkq.cloudera.site/model","accessKey":"miqnv6bxiwontz84ozoxfyc5rt6p6grb","colnames":["monthlycharges","totalcharges","tenure","gender","dependents","onlinesecurity","multiplelines","internetservice","seniorcitizen","techsupport", "contract","streamingmovies","deviceprotection","paymentmethod","streamingtv","phoneservice", "paperlessbilling","partner","onlinebackup"],"response_colname":"result"}')
+
+
+
+Churn By Type of Contract
+Churn By Family
+Churn By Service
+Scoring - Churn Probability
