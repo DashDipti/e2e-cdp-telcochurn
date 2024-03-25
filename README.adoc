@@ -38,7 +38,7 @@ Your instructor will guide you through this. +
 (2) http://3.109.161.118/auth/realms/workshop/protocol/saml/clients/samlclient[Workshop login]: Using the details in the previous step make sure you are able to login here. +
 
 
-= Cloudera Data Platform 
+= Workshop Guides
 (1). https://github.com/DashDipti/e2e-cdp-telcochurn/blob/master/docs/docx/01%20-%20CDF.docx[CDF] +
 (2). https://github.com/DashDipti/e2e-cdp-telcochurn/blob/master/docs/docx/02%20-%20CDE.docx[CDE] +
 (3). https://github.com/DashDipti/e2e-cdp-telcochurn/blob/master/docs/docx/03%20-%20CDW.docx[CDW - Part 1] +
