@@ -29,7 +29,7 @@ This workshop introduces CDP, with a focus on the data management capabilities t
 
 . Laptop with a supported OS (Windows 7 not supported) or MacBook.
 . A modern browser - Google Chrome (IE, Firefox, Safari not supported).
-. Wi-Fi Internet connection. 
+. Wi-Fi Internet connection.
 
 == Access Details
 
@@ -39,8 +39,8 @@ Your instructor will guide you through this. +
 
 
 = Cloudera Data Platform 
-(1). https://github.com/DashDipti/e2e-cdp-telcochurn/blob/master/docs/docx/01%20-%20CDF.docx[CDF]
-(2). https://github.com/DashDipti/e2e-cdp-telcochurn/blob/master/docs/docx/02%20-%20CDE.docx[CDE]
-(3). https://github.com/DashDipti/e2e-cdp-telcochurn/blob/master/docs/docx/03%20-%20CDW.docx[CDW - Part 1]
-(4). https://github.com/DashDipti/e2e-cdp-telcochurn/blob/master/docs/docx/04%20-%20CML.docx[CML]
-(5). https://github.com/DashDipti/e2e-cdp-telcochurn/blob/master/docs/docx/03%20-%20CDW.docx[CDW - Part 2]
+(1). https://github.com/DashDipti/e2e-cdp-telcochurn/blob/master/docs/docx/01%20-%20CDF.docx[CDF] +
+(2). https://github.com/DashDipti/e2e-cdp-telcochurn/blob/master/docs/docx/02%20-%20CDE.docx[CDE] +
+(3). https://github.com/DashDipti/e2e-cdp-telcochurn/blob/master/docs/docx/03%20-%20CDW.docx[CDW - Part 1] +
+(4). https://github.com/DashDipti/e2e-cdp-telcochurn/blob/master/docs/docx/04%20-%20CML.docx[CML] +
+(5). https://github.com/DashDipti/e2e-cdp-telcochurn/blob/master/docs/docx/03%20-%20CDW.docx[CDW - Part 2] +
