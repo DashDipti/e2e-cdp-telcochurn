@@ -29,7 +29,7 @@ This workshop introduces CDP, with a focus on the data management capabilities t
 
 . Laptop with a supported OS (Windows 7 not supported) or MacBook.
 . A modern browser - Google Chrome (IE, Firefox, Safari not supported).
-. Wi-Fi Internet connection.
+. Wi-Fi Internet connection with minimal security firewall on laptop and network.
 
 == Access Details
 
