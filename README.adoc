@@ -17,7 +17,7 @@ If you are new to Cloudera Data Platform then please spend some time in knowing 
 
 
 == Data Services
-There are 5 key Data services that CDP offeres which covers the entire data lifecycle. The are: +
+In this workshop, We will be getting to experience 4 out of the 5 key Data services that CDP offeres which covers the entire data lifecycle. They are: +
 
 *_Cloudera DataFlow (CDF)_* offers a flow-based low-code development paradigm that aligns best with how developers design, develop, and test data distribution pipelines. With over 450+ connectors and processors across the ecosystem of hybrid cloud services—including data lakes, lakehouses, cloud warehouses, and on-premises sources—CDF-PC provides indiscriminate data distribution. https://www.cloudera.com/products/dataflow.html[Read More here].
 
