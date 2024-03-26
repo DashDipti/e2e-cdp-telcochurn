@@ -1,2 +1,8 @@
-1. Use the exact following format for dataviz model value retrieval without any trailing characters. Note that you will need to change the value against "url" & "accessKey" to match your model.
+1. Preferable CDP Workload Password
+Changeme123!
+
+2. Kafka Brokers
+mtn-streams-corebroker1.psemeta.dp5i-5vkq.cloudera.site:9093,mtn-streams-corebroker0.psemeta.dp5i-5vkq.cloudera.site:9093,mtn-streams-corebroker2.psemeta.dp5i-5vkq.cloudera.site:9093
+
+3. Use the exact following format for dataviz model value retrieval without any trailing characters. Note that you will need to change the value against "url" & "accessKey" to match your model.
 cviz_rest('{"url":"https://modelservice.ml-6e4b5fc6-b95.psemeta.dp5i-5vkq.cloudera.site/model","accessKey":"miqnv6bxiwontz84ozoxfyc5rt6p6grb","colnames":["monthlycharges","totalcharges","tenure","gender","dependents","onlinesecurity","multiplelines","internetservice","seniorcitizen","techsupport", "contract","streamingmovies","deviceprotection","paymentmethod","streamingtv","phoneservice", "paperlessbilling","partner","onlinebackup"],"response_colname":"result"}')
