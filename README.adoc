@@ -17,7 +17,7 @@ If you are new to Cloudera Data Platform then please spend some time in knowing 
 
 
 == Data Services
-In this workshop, We will be getting to experience 4 out of the 5 key Data services that CDP offeres which covers the entire data lifecycle. They are: +
+In this workshop, we will be getting to experience 4 out of the 5 key Data services that CDP offeres which covers the entire data lifecycle. They are: +
 
 *_Cloudera DataFlow (CDF)_* offers a flow-based low-code development paradigm that aligns best with how developers design, develop, and test data distribution pipelines. With over 450+ connectors and processors across the ecosystem of hybrid cloud services—including data lakes, lakehouses, cloud warehouses, and on-premises sources—CDF-PC provides indiscriminate data distribution. https://www.cloudera.com/products/dataflow.html[Read More here].
 
@@ -34,7 +34,7 @@ In this workshop, We will be getting to experience 4 out of the 5 key Data servi
 . Laptop with a supported OS (Windows 7 not supported) or MacBook. Please disable any VPNs. +
 . A modern browser - Google Chrome (IE, Firefox, Safari not supported). +
 . Wi-Fi Internet connection with minimal security firewall on laptop and network. +
-and Do not copy/paste strings with trailing characters while executing the workshop.
+and *please do not copy/paste strings with trailing characters while executing the workshop*.
 
 == Access Details
 
