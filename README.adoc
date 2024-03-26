@@ -48,11 +48,11 @@ Your instructor will guide you through the following. +
 image:images/misc/flow.png[] 
 
 == Workshop Guides
-(1). https://github.com/DashDipti/e2e-cdp-telcochurn/blob/master/docs/docx/01%20-%20CDF.docx[CDF] +
-(2). https://github.com/DashDipti/e2e-cdp-telcochurn/blob/master/docs/docx/02%20-%20CDE.docx[CDE] +
-(3). https://github.com/DashDipti/e2e-cdp-telcochurn/blob/master/docs/docx/03%20-%20CDW.docx[CDW - Part 1] +
-(4). https://github.com/DashDipti/e2e-cdp-telcochurn/blob/master/docs/docx/04%20-%20CML.docx[CML] +
-(5). https://github.com/DashDipti/e2e-cdp-telcochurn/blob/master/docs/docx/03%20-%20CDW.docx[CDW - Part 2] +
+(1). https://github.com/DashDipti/e2e-cdp-telcochurn/blob/master/guides/pdfs/01%20-%20CDF.pdf[CDF] +
+(2). https://github.com/DashDipti/e2e-cdp-telcochurn/blob/master/guides/pdfs/02%20-%20CDE.pdf[CDE] +
+(3). https://github.com/DashDipti/e2e-cdp-telcochurn/blob/master/guides/pdfs/03%20-%20CDW%20(Part%20-1).pdf[CDW - Part 1] +
+(4). https://github.com/DashDipti/e2e-cdp-telcochurn/blob/master/guides/pdfs/04%20-%20CML.pdf[CML] +
+(5). https://github.com/DashDipti/e2e-cdp-telcochurn/blob/master/guides/pdfs/05%20-%20CDW%20(Part%20-2).pdf[CDW - Part 2] +
 
 == Cloudera Partners
 (1). https://github.com/cloudera-labs/cdp-validation#register-on-cloudera-sso[Register on CPN] +
