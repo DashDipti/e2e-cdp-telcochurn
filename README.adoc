@@ -16,8 +16,9 @@ This workshop introduces CDP, with a focus on the data management capabilities t
 If you are new to Cloudera Data Platform then please spend some time in knowing more about the platform by clicking https://www.cloudera.com/products/cloudera-data-platform.html[here] & https://docs.cloudera.com/?tab=cdp-public-cloud[here].
 
 
-== Overview
-There are 5 key Data services that CDP offeres which are: +
+== Data Services
+There are 5 key Data services that CDP offeres which covers the entire data lifecycle. The are: +
+
 *_Cloudera DataFlow (CDF)_* offers a flow-based low-code development paradigm that aligns best with how developers design, develop, and test data distribution pipelines. With over 450+ connectors and processors across the ecosystem of hybrid cloud services—including data lakes, lakehouses, cloud warehouses, and on-premises sources—CDF-PC provides indiscriminate data distribution. https://www.cloudera.com/products/dataflow.html[Read More here].
 
 *_Cloudera Data Engineering (CDE)_* is the only cloud-native service purpose-built for enterprise data engineering teams. Building on Apache Spark, Data Engineering is an all-inclusive data engineering toolset that enables orchestration automation with Apache Airflow, advanced pipeline monitoring, visual troubleshooting, and comprehensive management tools to streamline ETL processes across enterprise analytics teams. https://www.cloudera.com/products/data-engineering.html[Read More here].
