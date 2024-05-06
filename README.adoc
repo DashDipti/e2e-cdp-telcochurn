@@ -60,4 +60,3 @@ image:images/misc/flow.png[]
 (3). https://github.com/cloudera-labs/cdp-validation#request-for-development-license[Request for developer License] +
 
 image:images/misc/thankyou.PNG[] +
-
