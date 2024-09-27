@@ -1,0 +1,189 @@
+-------------------------------------------------
+Admin Steps (To be performed before the workshop)
+-------------------------------------------------
+
+PSEMETA-CDP-ENV (https://github.com/DashDipti/e2e-cdp-telcochurn)
+
+0.0 Whitelist IP
+Tenancy: aws-pse-cdp-demo-env
+Region: (US West (Oregon) us-west-2)
+Keycloak: psemetakc
+
+0.1 Make sure that hive and impala virtual house is up.
+
+Using Hive - Run the create table script (For all users and for master data)
+https://github.com/DashDipti/e2e-cdp-telcochurn/tree/master/admin/cdw
+
+
+0.2 For CDF (Just before the start of the lab 20 mins prior)
+Make sure that the 'lab_s3_to_kafka' is running and is writing the data to topic 'telco_data'.
+
+0.3 Make sure that under 'CDF' - 'Deployments' - 'lab_s3_to_kafka_telco' - Resume this deployment.
+a. Make sure that the data is getting written into Kafka topic.
+If it is getting written following things should happen.
+- In Kafka for the telco_data topic you should see
+Data In - 3 MB
+Data out - 0B
+MessagesIn - 7.1k (Actual value is 7043)
+Consumer Groups - 0
+Current Log SIze - 3 MB
+
+b. Also, when you open Nifi in the for the success step for 'PublishKafkaRecord_2_6' you should see 7,043 messages.
+
+0.4. If for some reason you are not able to see the records in the Kafka topic in SMM but are able to see records in Nifi in the success step do the following -
+a. Clear the queue in Nifi by right clicking the canvas and clicking on 'Empty the queues'.
+b. Close the Nifi Canvas Window.
+c. Go to the Deployment Name: lab_s3_to_kafka_telco and Stop the flow. Once the flow is stopped, start the flow.
+d. Wait for 5 mins and then repeat all the steps in 0.3 to verify data is getting written to kafka topic (telco_data).
+ 
+
+0.5 For CDE 
+a. Make sure that under 'Resources' - 'Telco_Churn' you have the following files (https://github.com/DashDipti/e2e-cdp-telcochurn/tree/master/admin/cde):
+- CDE-telco_data_enrichment.py
+- CDE-updateTable.py
+- parameters.conf
+'parameters.conf' should contain your bucket name something similar to 
+'data_lake_name: s3a://psemeta-buk-73b98f8e/'
+
+b. Create Spark jobs
+- Create Spark jobs for each script (Name as: _CDE-Data-Enrichment,_CDE-Table-Update), without Arguments (do not specify the user id). Set the job name as the same as the python script (it will be easier to identify). 
+- Click on 'Create', NOT 'Create and Run'.
+	
+0.6. Data Viz 
+- Make sure that the 'New Connection' option is available for users.
+- As an admin create a connection 'ImapalaConn' and test to see if it is able to connect. Save this connection.
+- As a user login to see if you are able to see the 'ImapalaConn'.
+
+- For Data Viz reports to access Model endpoints 
+	- Go to top right corner in DataViz and click on 'Site Settings'.
+	- Go to 'Advanced Settings' and under 'URLs that remote data columns can be fetched from' add something like the following - 'https://modelservice.ml-2e159fda-ac2.psemeta.dp5i-5vkq.cloudera.site/model'
+	
+	This can be obtained from 'CML' - 'Workspace' - 'Site Administration' - 'Overview' & look for 'Domain' to form the url like below.
+	https://[domain-name]/model
+	where 'domain-name' is something like 'modelservice.ml-2e159fda-ac2.psemeta.dp5i-5vkq.cloudera.site' and hence the final URL will be - 'https://modelservice.ml-2e159fda-ac2.psemeta.dp5i-5vkq.cloudera.site/model'
+						https://ml-2e159fda-ac2.psemeta.dp5i-5vkq.cloudera.site/model
+		
+	
+	
+	
+
+0.7 CML
+Make sure that there is a workspace (ssa-cml-workspace) which is up and running.
+
+
+----------
+User steps
+----------
+0. Make sure IPs are whitelisted
+Tenancy: aws-pse-cdp-demo-env
+Region: (US West (Oregon) us-west-2)
+Keycloak: psemetakc
+
+1. Make sure that the first flow is runnning and data is populated in the topic (telco_data)
+
+2. Give them GitHub URL 
+https://github.com/DashDipti/e2e-cdp-telcochurn?tab=readme-ov-file
+Go to section - 'Access Details'
+Click on - 'Credentials'
+Click on to open it in a separate tab - 'Workshop login'
+
+3. Ask them to download the workshop guides
+https://github.com/DashDipti/e2e-cdp-telcochurn/tree/master/guides/docx
+a. '01 - CDF.docx'
+b. '02 - CDE.docx'
+c. '03 - CDW (Part 1).docx'
+d. '04 - CML.docx'
+e. '05 - CDW (Part 2).docx'
+
+
+--------------Mental Notes  --------
+
+
+Overall Flow
+------------
+A. CDF
+- Data is already available in the kafka topic.
+- Read data from the kafka topic and write into iceberg table using the CDF flow.
+- Verify that data is loaded in Hive table.
+
+B. CDE 
+- Create the data pipeline using Airflow.
+- Check that the curated data table gets populated in Hive.
+
+C. CDW - Part 1
+- Create a dashboard using the curated data table that was created in the previous step.
+
+D. CML
+- Deploy telecomchurn AMP into the workspace.
+- Note the Endpoints of the mode with the key.
+
+E. CDW - Part 2
+- Add the churn column in the dashboard report to get predictions from the model end point for each customer.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1. Give 'parameters.conf' to the users. (https://github.com/DashDipti/e2e-cdp-telcochurn/blob/master/admin/cde/parameters.conf)
+data_lake_name: s3a://psemeta-buk-73b98f8e/
+
+
+
+4. Kafka broker list - Provide to user
+mtn-streams-corebroker1.psemeta.dp5i-5vkq.cloudera.site:9093,mtn-streams-corebroker0.psemeta.dp5i-5vkq.cloudera.site:9093,mtn-streams-corebroker2.psemeta.dp5i-5vkq.cloudera.site:9093
+
+
+
+
+Use the exact following format for dataviz model value retrieval.
+cviz_rest('{"url":"https://modelservice.ml-6e4b5fc6-b95.psemeta.dp5i-5vkq.cloudera.site/model","accessKey":"miqnv6bxiwontz84ozoxfyc5rt6p6grb","colnames":["monthlycharges","totalcharges","tenure","gender","dependents","onlinesecurity","multiplelines","internetservice","seniorcitizen","techsupport", "contract","streamingmovies","deviceprotection","paymentmethod","streamingtv","phoneservice", "paperlessbilling","partner","onlinebackup"],"response_colname":"result"}')
+
+
+
+------------------------- Mental Notes (Part 2) --------
+Data is in S3 bucket (Amazon S3 - Buckets - psemeta-buk-73b98f8e - data/)- WA_Fn-UseC_-Telco-Customer-Churn-new
+
+mtn-streams-corebroker1.psemeta.dp5i-5vkq.cloudera.site:9093,mtn-streams-corebroker0.psemeta.dp5i-5vkq.cloudera.site:9093,mtn-streams-corebroker2.psemeta.dp5i-5vkq.cloudera.site:9093
+
+
+Kafka Brokers
+kafkabrokers
+
+
+1. CDF
+
+cviz_rest('{"url":"https://modelservice.ml-2e159fda-ac2.psemeta.dp5i-5vkq.cloudera.site/model","accessKey":"m7lf38rd5m73gu0gevlfw8plzn3incse","colnames":["monthlycharges","totalcharges","tenure","gender","dependents","onlinesecurity","multiplelines","internetservice","seniorcitizen","techsupport", "contract","streamingmovies","deviceprotection","paymentmethod","streamingtv","phoneservice", "paperlessbilling","partner","onlinebackup"],"response_colname":"result"}')
+
+-----------------------------------
+
+
+
+
+
+
+
+
+
+------------------------ CDW Workshop --------------
+Mumbai
+KeyCloak: http://3.109.161.118/auth/realms/workshop/protocol/saml/clients/samlclient
+wuser01@workshop.com
+key-cloack-machine
+
+http://3.109.161.118/auth/admin/master/console/#/realms/workshop/users
+admin/admin
+
