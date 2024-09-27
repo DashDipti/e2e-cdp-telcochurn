@@ -59,14 +59,11 @@ b. Create Spark jobs
 	- Go to 'Advanced Settings' and under 'URLs that remote data columns can be fetched from' add something like the following - 'https://modelservice.ml-2e159fda-ac2.psemeta.dp5i-5vkq.cloudera.site/model'
 	
 	This can be obtained from 'CML' - 'Workspace' - 'Site Administration' - 'Overview' & look for 'Domain' to form the url like below.
-	https://[domain-name]/model
-	where 'domain-name' is something like 'modelservice.ml-2e159fda-ac2.psemeta.dp5i-5vkq.cloudera.site' and hence the final URL will be - 'https://modelservice.ml-2e159fda-ac2.psemeta.dp5i-5vkq.cloudera.site/model'
-						https://ml-2e159fda-ac2.psemeta.dp5i-5vkq.cloudera.site/model
-		
-	
-	
-	
-
+	https://modelservice.[domain-name]/model
+	where 'domain-name' is something like 'ml-2e159fda-ac2.psemeta.dp5i-5vkq.cloudera.site' and hence the final URL will be - 
+	'https://modelservice.ml-2e159fda-ac2.psemeta.dp5i-5vkq.cloudera.site/model'
+							
+			
 0.7 CML
 Make sure that there is a workspace (ssa-cml-workspace) which is up and running.
 
@@ -96,9 +93,9 @@ d. '04 - CML.docx'
 e. '05 - CDW (Part 2).docx'
 
 
---------------Mental Notes  --------
+--------------  Mental Notes  --------
 
-
+------------
 Overall Flow
 ------------
 A. CDF
